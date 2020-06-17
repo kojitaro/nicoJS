@@ -13,6 +13,7 @@ class nicoJS
 		@color     = params.color     || '#fff'
 		@width     = params.width     || 500
 		@height    = params.height    || 300
+		@textShadow    = params.textShadow    || '0 0 5px #111'
 
 		# 描画
 		@render()
@@ -62,7 +63,7 @@ class nicoJS
 		ele.style.left       = x + 'px'
 		ele.style.top        = y + 'px'
 		ele.style.fontSize   = font_size + 'px'
-		ele.style.textShadow = '0 0 5px #111'
+		ele.style.textShadow = @textShadow
 		ele.style.color      = color
 
 		@app.appendChild ele
